@@ -18,7 +18,7 @@ const Dashboard = () => {
       try {
         const response = await fetch("/api/vehicles");
         const data = await response.json();
-        setData(data.results.data);
+        setData(data.limitedResults);
       } catch (err) {
         console.log(err);
       } finally {
