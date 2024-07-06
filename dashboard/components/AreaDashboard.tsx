@@ -15,7 +15,7 @@ const LineDashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/vehicle_list");
+        const response = await fetch("/api/vehicles");
         const data = await response.json();
         setData(data.results.data);
       } catch (err) {
