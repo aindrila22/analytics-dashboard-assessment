@@ -40,11 +40,11 @@ const Columns = ({ data }: any) => {
 
   return (
     <>
-      <div className="flex justify-between items-center w-full">
+      <div className="flex flex-col sm:flex-row justify-between items-center w-full px-5">
         <div className="w-full text-green-400">Showing {rowsPerPage} datas</div>
         <div className="flex justify-end items-center w-full mb-4 text-yellow-200 space-x-4">
           <button
-            className="bg-blue-900 text-white text-xs rounded-lg p-2 flex justify-center items-center"
+            className=" text-white text-xs bg-blue-900 rounded-md py-1 px-2 flex justify-center items-center"
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
           >
@@ -56,7 +56,7 @@ const Columns = ({ data }: any) => {
             Page {currentPage} of {totalPages}{" "}
           </span>
           <button
-            className="bg-green-900 text-white text-xs rounded-lg p-2 flex justify-center items-center"
+            className=" text-white text-xs bg-blue-900 rounded-md py-1 px-2 flex justify-center items-center"
             onClick={() =>
               setCurrentPage((prev) => Math.min(prev + 1, totalPages))
             }
@@ -103,11 +103,11 @@ const Columns = ({ data }: any) => {
           </tbody>
         </table>
       </div>
-      <div className="flex justify-between items-center w-full my-10">
+      <div className="flex justify-between flex-col sm:flex-row items-center w-full my-10 px-5">
         <div className="w-full text-green-400">Showing {rowsPerPage} datas</div>
         <div className="flex justify-end items-center w-full mb-4 text-yellow-200 space-x-4">
           <button
-            className="bg-blue-900 text-white text-xs rounded-lg p-2 flex justify-center items-center"
+            className="bg-blue-900 rounded-md text-white text-xs py-1 px-2 flex justify-center items-center"
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
           >
@@ -119,7 +119,7 @@ const Columns = ({ data }: any) => {
             Page {currentPage} of {totalPages}{" "}
           </span>
           <button
-            className="bg-green-900 text-white text-xs rounded-lg p-2 flex justify-center items-center"
+            className="bg-blue-900 rounded-md text-white text-xs py-1 px-2 flex justify-center items-center"
             onClick={() =>
               setCurrentPage((prev) => Math.min(prev + 1, totalPages))
             }

@@ -6,6 +6,7 @@ import Sidebar from "./Sidebar";
 import Image from "next/image";
 import CustomBarChart from "./charts/BarChart";
 import Columns from "./table/Columns";
+import Link from "next/link";
 
 const Tabular = () => {
     const [data, setData] = useState<any>([]);
@@ -34,9 +35,17 @@ const Tabular = () => {
     <div className="flex justify-start items-start w-full">
       <Sidebar id="tabular"/>
       <div className="w-full">
-        <h1 className="text-gray-400 text-xl mt-10 px-6">
-          Electric Vehicle Dashboard (Tabular Data)
-        </h1>
+        <div className="flex justify-between items-center w-full">
+            <label>
+              {" "}
+              <h1 className="text-gray-400 text-xl my-10 px-6">
+              Electric Vehicle Dashboard (Tabular Data)
+              </h1>
+            </label>
+            <Link className="text-xs block lg:hidden px-4 text-gray-400 hover:underline hover:underline-offset-4" href={"/"}>
+              Home
+            </Link>
+          </div>
         {loading ? (
           <div className="pt-20 grid place-items-center">
             <Image
